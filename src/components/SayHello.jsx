@@ -11,7 +11,7 @@ const SayHello = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="w-full max-w-md mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow">
       <input
         type="text"
         value={name}
