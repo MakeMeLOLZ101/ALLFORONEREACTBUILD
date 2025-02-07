@@ -14,7 +14,7 @@ const ReverseItAlpha = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-50 p-4 flex justify-center">
     <div className="w-full max-w-[95%] md:max-w-[80%] lg:max-w-2xl mx-auto bg-white p-4 md:p-6 lg:p-8 rounded-lg shadow-md">
       <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4 text-center">Text Reverser</h2>
 

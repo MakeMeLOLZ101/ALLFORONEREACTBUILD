@@ -12,7 +12,9 @@ const SayHello = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow">
+    <div className="w-full max-w-md mx-auto p-6 bg-white border border-gray-200 rounded-lg shadow text-center">
+      
+      <h1 className="font-medium text-4xl mb-3">Say Hello</h1>
       <input
         type="text"
         value={name}

@@ -16,7 +16,7 @@ import { NavLink } from 'react-router-dom'
 function App() {
   return (
     <div className='px-3'>
-      <h1 className='text-7xl'>All For One</h1>
+      <h1 className='text-7xl flex items-center justify-center'>All For One</h1>
       <div className='grid grid-cols-2 md:grid-cols-3 justify-items-center center'>
         <div className='m-5 w-full p-1'>
           <NavLink type='button' to={'/say-hello'}>

@@ -48,7 +48,7 @@ const MagicEightBall = () => {
   return (
     <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-        Magic Eight Ball
+        Magic 8 Ball
       </h2>
       
       <div className="mb-6">
