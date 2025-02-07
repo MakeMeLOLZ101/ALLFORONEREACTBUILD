@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const NumberReverser = () => {
+const ReverseItNumbers = () => {
   const [inputNumber, setInputNumber] = useState('');
   const [result, setResult] = useState('');
   const [showError, setShowError] = useState(false);
@@ -74,4 +74,4 @@ const NumberReverser = () => {
   );
 };
 
-export default NumberReverser;
+export default ReverseItNumbers;
