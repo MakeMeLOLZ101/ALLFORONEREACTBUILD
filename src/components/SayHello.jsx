@@ -20,8 +20,8 @@ const SayHello = () => {
         className="border p-2 rounded mr-2"
         placeholder="Enter your name"
       />
-      <p className="mt-2">{() =>getGreeting(name)}</p>
-      <MenuButtons/>
+      <p className="mt-2">{getGreeting(name)}</p>
+      <MenuButtons />
     </div>
   );
 };

@@ -7,7 +7,7 @@ const AddingTwo = () => {
   const [result, setResult] = useState('');
 
   const handleCalculate = () => {
-    const sum = number(num1) + number(num2);
+    const sum = Number(num1) + Number(num2);
     setResult(`The sum of ${num1} and ${num2} is ${sum}.`);
   };
 
