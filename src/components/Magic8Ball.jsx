@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MenuButtons from "./MenuButtons";
 
 const Magic8Ball = () => {
   const [randomResponse, setRandomResponse] = useState("");
@@ -29,7 +30,7 @@ const Magic8Ball = () => {
   };
 
   const getRandomResponse = () => {
-    
+
   }
 
   return (
@@ -38,6 +39,9 @@ const Magic8Ball = () => {
         Magic 8 Ball
       </h1>
 
+
+
+      <MenuButtons/>
     </div>
   );
 };

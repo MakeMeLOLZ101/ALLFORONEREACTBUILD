@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuButtons from './MenuButtons';
 
 const AddingTwo = () => {
   const [num1, setNum1] = useState('');
@@ -62,6 +63,7 @@ const AddingTwo = () => {
           {result}
         </div>
       )}
+      <MenuButtons/>
     </div>
   );
 };

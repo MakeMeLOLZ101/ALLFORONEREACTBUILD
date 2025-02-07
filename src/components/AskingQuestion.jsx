@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuButtons from './MenuButtons';
 
 const AskingQuestion = () => {
   const [wakeUpTime, setWakeUp] = useState('');
@@ -37,6 +38,8 @@ const AskingQuestion = () => {
         placeholder="What did you last have to eat??"
       />
       <p className="mt-2">{getFoodAnswer(lastFood)}</p>
+
+      <MenuButtons/>
     </div>
   );
 };

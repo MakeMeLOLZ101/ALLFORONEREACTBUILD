@@ -1,4 +1,5 @@
 import { useState } from "react";
+import MenuButtons from "./MenuButtons";
 
 const ReverseItAlpha = () => {
   const [inputText, setInputText] = useState("");
@@ -45,6 +46,7 @@ const ReverseItAlpha = () => {
         </div>
       )}
     </div>
+    <MenuButtons/>
     </div>
   );
 };

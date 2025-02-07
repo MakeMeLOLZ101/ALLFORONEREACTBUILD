@@ -19,16 +19,16 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<App />}/>
-      <Route path='/sayhello' element={<SayHello />} />
-      <Route path='/addingnums' element={<AddingTwo />} />
-      <Route path='/askingquestions' element={<AskingQuestion />} />
-      <Route path='/guessit' element={<GuessIt />} />
-      <Route path='/magicball' element={<Magic8Ball />} />
-      <Route path='/oddoreven' element={<OddOrEven />} />
-      <Route path='/restpicker' element={<RestaurantPicker />} />
-      <Route path='/reverseita' element={<ReverseItAlpha />} />
-      <Route path='/madlib' element={<MadLib />} />
-      <Route path='/reverseitn' element={<ReverseItNumbers />} />
+      <Route path='/say-hello' element={<SayHello />} />
+      <Route path='/adding-nums' element={<AddingTwo />} />
+      <Route path='/asking-questions' element={<AskingQuestion />} />
+      <Route path='/guess-it' element={<GuessIt />} />
+      <Route path='/magic-ball' element={<Magic8Ball />} />
+      <Route path='/odd-or-even' element={<OddOrEven />} />
+      <Route path='/rest-picker' element={<RestaurantPicker />} />
+      <Route path='/reverse-it-alpha' element={<ReverseItAlpha />} />
+      <Route path='/mad-lib' element={<MadLib />} />
+      <Route path='/reverse-it-nums' element={<ReverseItNumbers />} />
     </Routes>
     </BrowserRouter>
   </StrictMode>,

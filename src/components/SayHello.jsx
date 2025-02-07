@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MenuButtons from './MenuButtons';
 
 const SayHello = () => {
   const [name, setName] = useState('');
@@ -20,6 +21,7 @@ const SayHello = () => {
         placeholder="Enter your name"
       />
       <p className="mt-2">{() =>getGreeting(name)}</p>
+      <MenuButtons/>
     </div>
   );
 };

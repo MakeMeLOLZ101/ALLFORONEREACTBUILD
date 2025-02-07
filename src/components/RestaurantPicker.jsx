@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Label, Select } from 'flowbite-react';
+import MenuButtons from './MenuButtons';
 
 const RestaurantPicker = () => {
   const [selectedCuisine, setSelectedCuisine] = useState('');
@@ -103,6 +104,7 @@ const RestaurantPicker = () => {
           <p className="text-center font-medium">{result}</p>
         </div>
       )}
+      <MenuButtons/>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Label, TextInput, Alert, Card } from 'flowbite-react';
+import MenuButtons from './MenuButtons';
 
 const GuessIt = () => {
   const [userGuess, setUserGuess] = useState('');
@@ -31,7 +32,7 @@ const GuessIt = () => {
 
   const handleGuess = () => {
     if (!userGuess.match(/^\d+$/)) {
-      setMessage('Numbers only bro');
+      setMessage('Please enter a valid number');
       return;
     }
 
@@ -41,83 +42,86 @@ const GuessIt = () => {
       let successMessage = '';
       switch (difficulty) {
         case 'easy':
-          successMessage = 'You got it, not like it was that hard anyway';
+          successMessage = 'Congratulations! You found the number!';
           break;
         case 'medium':
-          successMessage = 'You got it dude! Nice!';
+          successMessage = 'Great job! You got it right!';
           break;
         case 'hard':
-          successMessage = 'No way man! You got it!';
+          successMessage = 'Amazing! You found the number on hard mode!';
           break;
       }
       setMessage(successMessage);
       setShowSuccess(true);
     } else if (guess > targetNumber) {
-      setMessage('Way over the target dude, try going lower next time');
+      setMessage('Too high! Try a lower number');
     } else {
-      setMessage('Aim higher, dude');
+      setMessage('Too low! Try a higher number');
     }
   };
 
   return (
-    <Card className="max-w-sm mx-auto">
-      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-        Guess It Game
-      </h2>
-      
-      <div className="flex gap-2 mb-4">
-        <Button 
-          color={difficulty === 'easy' ? 'success' : 'gray'}
-          onClick={() => startNewGame('easy')}
-        >
-          Easy
-        </Button>
-        <Button 
-          color={difficulty === 'medium' ? 'success' : 'gray'}
-          onClick={() => startNewGame('medium')}
-        >
-          Medium
-        </Button>
-        <Button 
-          color={difficulty === 'hard' ? 'success' : 'gray'}
-          onClick={() => startNewGame('hard')}
-        >
-          Hard
-        </Button>
-      </div>
-
-      <div className="mb-4">
-        <div className="mb-2 block">
-          <Label htmlFor="guess" value="Enter your guess:" />
+    <div className="container mx-auto p-4">
+      <Card className="max-w-sm mx-auto">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Number Guessing Game
+        </h2>
+        
+        <div className="flex gap-2 mb-4">
+          <Button 
+            gradientDuoTone={difficulty === 'easy' ? 'greenToBlue' : 'purpleToBlue'}
+            onClick={() => startNewGame('easy')}
+          >
+            Easy
+          </Button>
+          <Button 
+            gradientDuoTone={difficulty === 'medium' ? 'greenToBlue' : 'purpleToBlue'}
+            onClick={() => startNewGame('medium')}
+          >
+            Medium
+          </Button>
+          <Button 
+            gradientDuoTone={difficulty === 'hard' ? 'greenToBlue' : 'purpleToBlue'}
+            onClick={() => startNewGame('hard')}
+          >
+            Hard
+          </Button>
         </div>
-        <TextInput
-          id="guess"
-          type="number"
-          value={userGuess}
-          onChange={(e) => setUserGuess(e.target.value)}
-          placeholder="Enter a number"
-        />
-      </div>
 
-      <Button onClick={handleGuess} disabled={targetNumber === null}>
-        Submit Guess
-      </Button>
+        <div className="mb-4">
+          <div className="mb-2 block">
+            <Label htmlFor="guess" value="Enter your guess:" />
+          </div>
+          <TextInput
+            id="guess"
+            type="number"
+            value={userGuess}
+            onChange={(e) => setUserGuess(e.target.value)}
+            placeholder="Enter a number"
+          />
+        </div>
 
-      {message && (
-        <Alert
-          color={showSuccess ? 'success' : 'info'}
-          className="mt-4"
-        >
-          {message}
-        </Alert>
-      )}
+        <Button onClick={handleGuess} disabled={targetNumber === null} gradientDuoTone="cyanToBlue">
+          Submit Guess
+        </Button>
 
-      {targetNumber === null && (
-        <Alert color="warning" className="mt-4">
-          Select a difficulty to start the game!
-        </Alert>
-      )}
-    </Card>
+        {message && (
+          <Alert
+            color={showSuccess ? 'success' : 'info'}
+            className="mt-4"
+          >
+            {message}
+          </Alert>
+        )}
+
+        {targetNumber === null && (
+          <Alert color="warning" className="mt-4">
+            Select a difficulty to start the game!
+          </Alert>
+        )}
+      </Card>
+      <MenuButtons/>
+    </div>
   );
 };
 
